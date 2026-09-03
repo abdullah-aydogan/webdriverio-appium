@@ -3,3 +3,6 @@ node_modules/
 .env
 log/
 logs/
+allure-reports/
+allure-report/
+wdio-appium.log

@@ -4,7 +4,7 @@ const { config } = require('./wdio.shared.conf');
 config.port = 4723;
 
 config.specs = [
-    '../test/specs/android/webview*.js'
+    '../test/specs/android/add-note.spec.js'
 ];
 
 config.capabilities = [
