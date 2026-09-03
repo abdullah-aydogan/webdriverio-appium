@@ -4,7 +4,7 @@ const { config } = require('./wdio.shared.conf');
 config.port = 4723;
 
 config.specs = [
-    '../test/specs/android/add-note-screen*.js'
+    '../test/specs/android/webview*.js'
 ];
 
 config.capabilities = [
@@ -18,6 +18,13 @@ config.capabilities = [
     }
 ];
 
-config.services = ['appium'];
+config.services = [['appium', {
+    args: {
+        address: 'localhost',
+        port: 4723,
+        relaxedSecurity: true
+    },
+    logPath: './'
+}]];
 
 exports.config = config;
